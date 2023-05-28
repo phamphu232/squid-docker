@@ -9,3 +9,10 @@ services:
     ports:
       - "3128:3128/tcp"
     restart: unless-stopped
+  nginx-alpine-slim:
+    image: nginx:alpine-slim
+    container_name: nginx-alpine-slim
+    volumes:
+      - ./volumes/nginx:/usr/share/nginx/html
+    ports:
+      - "8080:80/tcp"

@@ -16,3 +16,4 @@ services:
       - ./volumes/nginx:/usr/share/nginx/html
     ports:
       - "8080:80/tcp"
+    restart: unless-stopped
